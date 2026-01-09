@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  background: #0e1117;
+  color: #e6edf3;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #161b22;
+}
+
+.top-box {
+  text-align: center;
+}
+
+.top-box span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hands {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.hand-box {
+  flex: 1;
+  border: 1px solid #30363d;
+  padding: 10px;
+}
+
+.decision {
+  text-align: center;
+  padding: 10px;
+}
+
+.sidebets span {
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 5px;
+  background: #30363d;
+}
+
+.active {
+  background: #2ea043;
+}
+
+.bottom {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.finance, .keypad, .others {
+  flex: 1;
+  border: 1px solid #30363d;
+  padding: 10px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+button {
+  background: #21262d;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.undo { background: #f85149; }
+.end { background: #2ea043; }
