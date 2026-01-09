@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinite Blackjack Counter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="top-box">
+    <div>COUNT</div>
+    <span id="count">0</span>
+  </div>
+  <div class="top-box">
+    <div>BET CONSIGLIATA</div>
+    <span id="bet">1</span> €
+  </div>
+</header>
+
+<main>
+
+<section class="hands">
+  <div class="hand-box">
+    <h3>LE TUE MANI</h3>
+    <div id="playerHands"></div>
+    <button onclick="splitHand()">SPLIT</button>
+  </div>
+
+  <div class="hand-box">
+    <h3>BANCO</h3>
+    <div id="dealerHand"></div>
+  </div>
+</section>
+
+<section class="decision">
+  <h2 id="decisionText">IN ATTESA...</h2>
+  <div class="sidebets">
+    <span id="insurance">INSURANCE</span>
+    <span id="bustit">BUST IT</span>
+  </div>
+</section>
+
+<section class="bottom">
+
+  <div class="finance">
+    <h3>FINANZE</h3>
+    <p>Mani: <span id="hands">0</span></p>
+    <p>Vinte: <span id="wins">0</span></p>
+    <p>Perse: <span id="losses">0</span></p>
+    <p>Push: <span id="push">0</span></p>
+    <p>Bust: <span id="bust">0</span></p>
+    <p>Bankroll: <span id="bankroll">1000</span> €</p>
+    <p>Saldo: <span id="saldo">1000</span> €</p>
+    <p>ROI: <span id="roi">0</span> %</p>
+  </div>
+
+  <div class="keypad">
+    <h3>CARTE</h3>
+    <div class="keys">
+      <button onclick="addCard(2)">2</button>
+      <button onclick="addCard(3)">3</button>
+      <button onclick="addCard(4)">4</button>
+      <button onclick="addCard(5)">5</button>
+      <button onclick="addCard(6)">6</button>
+      <button onclick="addCard(7)">7</button>
+      <button onclick="addCard(8)">8</button>
+      <button onclick="addCard(9)">9</button>
+      <button onclick="addCard(10)">10</button>
+      <button onclick="addCard('A')">A</button>
+    </div>
+    <button class="undo" onclick="undo()">UNDO</button>
+    <button class="end" onclick="endHand()">FINE MANO</button>
+  </div>
+
+  <div class="others">
+    <h3>ALTRE CARTE</h3>
+    <button onclick="addOther(2)">2</button>
+    <button onclick="addOther(5)">5</button>
+    <button onclick="addOther(10)">10</button>
+    <button onclick="addOther('A')">A</button>
+  </div>
+
+</section>
+
+</main>
+
+<script src="config.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
